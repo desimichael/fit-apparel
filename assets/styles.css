@@ -9,6 +9,14 @@
 html,body {
   font-family: 'Montserrat',sans-serif;
   font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+  width: 100vw;
+  overflow-y: scroll;
+  background: #d3d3d3;
+}
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
 }
 h1,h2,h3 {
   font-family: 'Montserrat',
@@ -34,14 +42,15 @@ header {
   height: 80px;
   padding: 0 5%;
   z-index: 10000;
+  color: white;
 }
 
 header .logo a {
   font-weight: 700;
   font-size: 1.5rem;
   text-decoration: none;
-  color: white;
   text-transform: uppercase;
+  color: white;
 }
 
 header .menu {
@@ -57,6 +66,7 @@ header .menu a {
   display: inline-block;
   font-weight: 500;
   padding: 0 20px;
+  color: white;
 }
 
 header .menu .dropdown {
@@ -73,6 +83,7 @@ header .menu .dropdown .sub-menu {
   position: absolute;
   transform: translate3d(0, 10px, 0);
   /* padding: 20px; */
+  background: white;
   min-width: 150px;
 }
 
@@ -85,6 +96,7 @@ header .menu .dropdown .sub-menu a {
   height: 100vh;
   width: 100%;
   position: relative;
+  margin-bottom: 25px;
 }
 
 #jumbo .bg-image {
@@ -118,7 +130,8 @@ header .menu .dropdown .sub-menu a {
   font-size: 5rem;
   font-weight: 500;
   text-transform: uppercase;
-  color: white;
+  color: #00ff00;
+  letter-spacing: 5px;
   transform: translate3d(100px, 0, 0);
 }
 
@@ -127,7 +140,8 @@ header .menu .dropdown .sub-menu a {
   font-size: 7rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: white;
+  color: #00ff00;
+  letter-spacing: 5px;
   transform: translate3d(105px, 0, 0);
 }
 
@@ -151,7 +165,7 @@ header .menu .dropdown .sub-menu a {
   background: green;
   position: absolute;
   height: 20%;
-  width: 65%;
+  width: 63%;
   bottom: 0;
   right: 0;
   z-index: 3;
@@ -169,22 +183,227 @@ header .menu .dropdown .sub-menu a {
 }
 
 /* collections section */
-#twoCollections .left-box {
+#twoCollections {
+  margin-bottom: 25px;
+}
+
+#twoCollections .left-c .left-c-img {
+  width: 100%;
   position: relative;
 }
-#twoCollections .left-box .left-box-img {
+#twoCollections .left-c .left-c-img img {
+  height: 500px;
   width: 100%;
+  object-fit: cover;
+  object-position: center;
 }
-#twoCollections .left-box .collection-title {
+#twoCollections .left-c .left-c-img .overlay {
   position: absolute;
-  color: red;
-  font-size: 2rem;
+  height: 100%;
+  width: 100%;
+  background: rgba(6, 148, 6, 0.5);
+}
+#twoCollections .left-c .collection-title {
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  transform: translate3d(-100px,0,0);
+  color: white;
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
+}
+#twoCollections .left-c .collection-title span {
+  line-height: 1;
+  transform: translate3d(-25px,50px,0);
+}
+
+#twoCollections .right-c {
+  background: #e5e4e2;
+}
+#twoCollections .right-c .right-c-bg {
+  background: #e5e4e2;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#twoCollections .right-c .right-c-bg .right-c-img {
+  height: 300px;
+  width: 300px;
+  position: relative;
+}
+#twoCollections .right-c .right-c-bg .right-c-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+#twoCollections .right-c .right-c-bg .right-c-img .collection-title span {
+  font-size: 3rem;
+  color: white;
+  font-weight: 900;
+  text-transform: uppercase;
+  display: block;
+  transform: translate3d(-70px,-100px,0);
+}
+
+/* horizontal sale */
+#horizontal-sale {
+  background: url(/assets/images/sale.png);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 500px;
+  width: 100%;
+}
+#horizontal-sale .overlay {
+  background: rgba(0, 0, 0, .5);
+  color: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#horizontal-sale .overlay .percent-number {
+  font-size: 13rem;
+  font-weight: 900;
+  line-height: 1;
+}
+#horizontal-sale .overlay .title {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+#horizontal-sale .overlay .sale-btn {
+  font-size: 1.3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  padding: 15px 50px;
+  border: 2px solid white;
+  color: white;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+}
+#horizontal-sale .overlay .sale-btn:hover {
+  background: #00ff00;
+  color: black;
+}
+
+/* Products Section */
+#products-group {
+  padding: 50px 0 0 0;
+}
+
+#products-group div[class*="col"] {
+  margin-bottom: 50px;
+}
+#products-group h2 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+#products-group .product-bg {
+  background: white;
+  height: 100%;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+#products-group .product-bg .product-img {
+  width: 80%;
+}
+#products-group .product-bg .overlay {
+  background:rgba(27, 27, 27,.8);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all .2s ease-in-out;
+  opacity: 0;
+  cursor: pointer;
+  color: #00ff00;
+}
+#products-group .product-bg .overlay:hover {
+  opacity: 1;
+}
+#products-group .product-bg .overlay .product-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+#products-group .product-bg .overlay .product-price {
+  font-weight: 600;
+}
+
+/* footer section */
+footer {
+  background: #1b1b1b;
+  padding: 50px 0;
+}
+footer .footer-menu .menu-title,
+footer  .social-title {
+  color: #00ff00;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: block;
+}
+footer .footer-menu .menu-links .link a {
+  color: white;
+  font-size: .9rem;
+}
+footer .footer-menu .menu-links .link:not(:last-child) {
+  margin-bottom: 10px;
+}
+footer .social-icons {
+  display: flex;
+
+}
+footer .social-icons li a {
+  height: 30px;
+  width: 30px;
+  background: white;
+  color:black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .2s ease-in-out;
+}
+footer .social-icons li a:hover {
+  background:rgba(6, 148, 6, 0.5);
+  color: white;
+  border: 1px solid white;
+}
+footer .social-icons li:not(:last-child) {
+  margin-right: 15px;
+}
+footer hr {
+  color: white;
+
+}
+footer .address{
+  color: white;
+  font-size: .7rem;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
 }
