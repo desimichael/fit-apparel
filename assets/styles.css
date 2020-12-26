@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Roboto:wght@300;500;700&display=swap');
-@import "css/header.css";
-@import "css/jumbo.css";
 
 
 * {
@@ -39,8 +37,8 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 80px;
-  padding: 0 5%;
+  height: 60px;
+  padding: 0 7%;
   z-index: 10000;
   color: white;
 }
@@ -50,16 +48,18 @@ header .logo a {
   font-size: 1.5rem;
   text-decoration: none;
   text-transform: uppercase;
+  display: block;
   color: white;
 }
 
 header .menu {
   display: flex;
   color: white;
+  margin-bottom: 0;
 }
 
 header .menu .link {
-  padding: 20px;
+  padding: 10px;
 }
 
 header .menu a {
@@ -93,16 +93,29 @@ header .menu .dropdown .sub-menu a {
   padding: 10px;
 }
 #jumbo {
+  background: black;
   height: 100vh;
   width: 100%;
   position: relative;
   margin-bottom: 25px;
+  overflow: hidden;
 }
 
+#jumbo .bg-video {
+  height: 100%;
+  width: 100%;
+  background: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+   z-index: 1;
+  transform: scale(1.5);
+}
 #jumbo .bg-image {
   background: url(/assets/images/boxer.png);
   height: 100%;
   width: 100%;
+  z-index: 1;
   background: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -110,11 +123,12 @@ header .menu .dropdown .sub-menu a {
 }
 
 #jumbo .transparent-color {
-  /* background: rgba(0, 0, 0, .7); */
+  background: rgba(0, 0, 0, .5);
   height: 100vh;
   width: 100%;
   position: absolute;
   top: 0;
+  z-index: 2;
 }
 
 #jumbo .titles {
@@ -128,7 +142,7 @@ header .menu .dropdown .sub-menu a {
 
 #jumbo .titles h1 {
   font-size: 5rem;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   color: #00ff00;
   letter-spacing: 5px;
@@ -185,6 +199,7 @@ header .menu .dropdown .sub-menu a {
 /* collections section */
 #twoCollections {
   margin-bottom: 25px;
+  overflow: hidden;
 }
 
 #twoCollections .left-c .left-c-img {
@@ -258,7 +273,7 @@ header .menu .dropdown .sub-menu a {
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-  height: 500px;
+  height: 700px;
   width: 100%;
 }
 #horizontal-sale .overlay {
@@ -292,7 +307,7 @@ header .menu .dropdown .sub-menu a {
   padding: 15px 50px;
   border: 2px solid white;
   color: white;
-  transition: .3s ease-in-out;
+  transition: .2s ease-in-out;
   cursor: pointer;
 }
 #horizontal-sale .overlay .sale-btn:hover {
@@ -311,7 +326,7 @@ header .menu .dropdown .sub-menu a {
 #products-group h2 {
   font-size: 2rem;
   text-align: center;
-  font-weight: 700;
+  font-weight: 900;
   margin-bottom: 50px;
 }
 #products-group .product-bg {
