@@ -152,7 +152,7 @@ let twoCollscene = new ScrollMagic.Scene({
   // duration: document.querySelector('#twoCollections').offsetHeight
 })
   .setTween(twoCollectionTL)
-  .addIndicators()
+  // .addIndicators()
   .addTo(homeController)
 
 
@@ -189,7 +189,7 @@ let headerScene = new ScrollMagic.Scene({
   // duration: document.querySelector('#twoCollections').offsetHeight
 })
   .setTween(headerTL)
-  .addIndicators()
+  // .addIndicators()
   .addTo(homeController)
 
 
@@ -198,7 +198,7 @@ let headerScene = new ScrollMagic.Scene({
 const horizontalSaleTL = gsap.timeline();
 
 horizontalSaleTL.fromTo(
-  'horizontal-sale',
+  '#horizontal-sale',
   {
     opacity: 0
   },
@@ -236,7 +236,7 @@ let horizontalSaleScene = new ScrollMagic.Scene({
   // duration: document.querySelector('#twoCollections').offsetHeight
 })
   .setTween(horizontalSaleTL)
-  .addIndicators()
+  // .addIndicators()
   .addTo(homeController)
 
 
@@ -267,7 +267,7 @@ let productsGroupScene = new ScrollMagic.Scene({
   // duration: document.querySelector('#twoCollections').offsetHeight
 })
   .setTween(productsGroupTL)
-  .addIndicators()
+  // .addIndicators()
   .addTo(homeController)
 
 
@@ -297,5 +297,5 @@ let footerScene = new ScrollMagic.Scene({
   // duration: document.querySelector('#twoCollections').offsetHeight
 })
   .setTween(footerTL)
-  .addIndicators()
+  // .addIndicators()
   .addTo(homeController)
