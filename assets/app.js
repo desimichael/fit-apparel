@@ -105,7 +105,7 @@ const twoCollectionTL = gsap.timeline();
 twoCollectionTL.fromTo(
   '#twoCollections .col-md-6',
   {
-    y: 300,
+    y: 200,
     opacity: 0
   },
   {
@@ -117,7 +117,7 @@ twoCollectionTL.fromTo(
   .fromTo(
     '#twoCollections .left-c span',
     {
-      y: 300,
+      y: 200,
       opacity: 0
     },
     {
@@ -138,7 +138,7 @@ twoCollectionTL.fromTo(
       duration: 1
     },
     '>-.8'
-  )
+  );
 
 /*SCROLL ANIMATION */
 let homeController = new ScrollMagic.Controller();
@@ -189,5 +189,113 @@ let headerScene = new ScrollMagic.Scene({
   // duration: document.querySelector('#twoCollections').offsetHeight
 })
   .setTween(headerTL)
+  .addIndicators()
+  .addTo(homeController)
+
+
+
+/*HORIZONTAL SALE ANIMATION */
+const horizontalSaleTL = gsap.timeline();
+
+horizontalSaleTL.fromTo(
+  'horizontal-sale',
+  {
+    opacity: 0
+  },
+  {
+    opacity: 1
+  }
+)
+  .fromTo(
+    '#horizontal-sale .percent-number',
+    {
+      scale: 0
+    },
+    {
+      scale: 1,
+      duration: 1
+    }
+  )
+  .fromTo(
+    '#horizontal-sale .title',
+    {
+      scale: 0
+    },
+    {
+      scale: 1
+    },
+    '>-1'
+  );
+
+let horizontalSaleScene = new ScrollMagic.Scene({
+  triggerElement: '#horizontal-sale',
+  triggerHook: 1,
+  reverse: true,
+  offset: 150,
+  duration: document.querySelector('#horizontal-sale').offsetHeight
+  // duration: document.querySelector('#twoCollections').offsetHeight
+})
+  .setTween(horizontalSaleTL)
+  .addIndicators()
+  .addTo(homeController)
+
+
+
+/*PRODUCTS GROUP ANIMATION */
+const productsGroupTL = gsap.timeline();
+
+productsGroupTL.fromTo(
+  '#products-group .product-bg',
+  {
+    opacity: 0,
+    y: 150
+  },
+  {
+    opacity: 1,
+    y: 0,
+    stagger: .3,
+    duration: .3
+  }
+);
+
+let productsGroupScene = new ScrollMagic.Scene({
+  triggerElement: '#products-group',
+  triggerHook: 1,
+  reverse: false,
+  offset: 200,
+  duration: 0
+  // duration: document.querySelector('#twoCollections').offsetHeight
+})
+  .setTween(productsGroupTL)
+  .addIndicators()
+  .addTo(homeController)
+
+
+/*FOOTER ANIMATION */
+const footerTL = gsap.timeline();
+
+footerTL.fromTo(
+  'footer .footer-fade-in',
+  {
+    opacity: 0,
+    y: 100
+  },
+  {
+    opacity: 1,
+    y: 0,
+    stagger: .3,
+    duration: .3
+  }
+);
+
+let footerScene = new ScrollMagic.Scene({
+  triggerElement: 'footer',
+  triggerHook: 1,
+  reverse: false,
+  offset: 0,
+  duration: 0
+  // duration: document.querySelector('#twoCollections').offsetHeight
+})
+  .setTween(footerTL)
   .addIndicators()
   .addTo(homeController)
