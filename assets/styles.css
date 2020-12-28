@@ -10,7 +10,7 @@ html,body {
   overflow: hidden;
   width: 100vw;
   overflow-y: scroll;
-  background: #d3d3d3;
+  /* background: #d3d3d3; */
 }
 .container {
   max-width: 1110px;
@@ -56,23 +56,24 @@ header .menu {
   display: flex;
   margin-bottom: 0;
 }
+
 header .menu.mobile-mode .link {
   display: none;
 }
 header .menu .open-mobile-menu {
   display: none;
 }
+
 header .menu.mobile-mode .open-mobile-menu {
   display: block;
   color: white;
-}
-header .menu.mobile-mode .open-mobile-menu {
   font-size: 1.5rem;
   height: 50px;
   width: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 header .menu .link {
   padding: 10px;
@@ -120,6 +121,7 @@ header .menu .dropdown .sub-menu a {
   z-index: 20;
   padding: 20px;
   display: none;
+  transform: translate3d(-100%,0,0);
 }
 #mobile-menu.active {
   display: block;
@@ -140,14 +142,14 @@ header .menu .dropdown .sub-menu a {
   color: white;
   height: 50px;
   width: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 1.5rem;
   position: absolute;
   right: 0;
+  top: -5px;
+  cursor: pointer;
 }
 #mobile-menu .menu li {
+  text-align: center;
   margin-bottom: 1rem;
 }
 #mobile-menu .menu li > a {
@@ -503,4 +505,38 @@ footer .address{
   text-transform: uppercase;
   display: block;
   text-align: center;
+}
+
+
+
+/* MEDIA BREAKPOINTS */
+/* tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    background: red;
+  }
+  #jumbo .bg-video {
+    transform: scale(3.5, 3.5);
+  }
+  #jumbo .titles h2 {
+    font-size: 6rem;
+  }
+  #jumbo .titles h2 {
+    font-size: 8rem;
+  }
+}
+/* large phones */
+@media (min-width: 576px) and (max-width: 767px) {
+  body {
+    background: yellow;
+  }
+}
+/* small phones */
+@media (max-width: 575px) {
+  body {
+    background: blue;
+  }
+  #jumbo .bg-video {
+    transform: scale(3.5, 3.5);
+  }
 }

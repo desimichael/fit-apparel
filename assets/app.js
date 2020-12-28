@@ -13,7 +13,7 @@ jumboTL.fromTo(
   }
 )
   .fromTo(
-    '.logo',
+    'header .logo',
     {
       x: -200,
       opacity: 0
@@ -25,7 +25,7 @@ jumboTL.fromTo(
     }
   )
   .fromTo(
-    '.menu',
+    'header .menu',
     {
       x: 200,
       opacity: 0
@@ -44,7 +44,7 @@ jumboTL.fromTo(
       opacity: 0
     },
     {
-      x: 100,
+      x: (window.innerWidth * .10),
       opacity: 1,
       duration: 1
     },
@@ -57,7 +57,7 @@ jumboTL.fromTo(
       opacity: 0
     },
     {
-      x: 100,
+      x: (window.innerWidth * .11),
       opacity: 1,
       duration: 1
     },
@@ -178,7 +178,8 @@ headerTL.fromTo(
     {
       scale: .8,
       duration: .5
-    }
+    },
+    ">-.4"
   );
 let headerScene = new ScrollMagic.Scene({
   triggerElement: '#jumbo',
@@ -299,3 +300,55 @@ let footerScene = new ScrollMagic.Scene({
   .setTween(footerTL)
   // .addIndicators()
   .addTo(homeController)
+
+
+// MOBILE MENU Animation
+const mobileMenuTL = gsap.timeline({
+  paused: true
+});
+
+mobileMenuTL
+  .fromTo(
+    '#mobile-menu',
+    {
+      x: "-100%"
+    },
+    {
+      x: 0,
+      duration: .7,
+      delay: 1
+    }
+  )
+  .fromTo(
+    '#mobile-menu .menu .link',
+    {
+      y: 50,
+      opacity: 0
+    },
+    {
+      y: 0,
+      opacity: 1,
+      duration: .7,
+      stagger: .2
+    }
+  )
+const openMobileMenu = document.querySelector(".open-mobile-menu");
+openMobileMenu.addEventListener('click', () => {
+  mobileMenuTL.play()
+})
+const closeMobileMenu = document.querySelector(".close-mobile-menu");
+closeMobileMenu.addEventListener('click', () => {
+  mobileMenuTL.reverse()
+})
+
+const mobileModeOn = () => {
+  if (window.innerWidth <= 991) {
+    document.querySelector("header .menu").classList.add("mobile-mode");
+  } else {
+    document.querySelector("header .menu").classList.remove("mobile-mode");
+  }
+};
+mobileModeOn();
+window.addEventListener("resize", function (event) {
+  mobileModeOn();
+})
