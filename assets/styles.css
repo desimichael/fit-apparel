@@ -219,7 +219,7 @@ header .menu .dropdown .sub-menu a {
   flex-direction: column;
 }
 
-#jumbo .titles h1 {
+#jumbo .titles h2 {
   font-size: 5rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -228,7 +228,7 @@ header .menu .dropdown .sub-menu a {
   transform: translate3d(100px, 0, 0);
 }
 
-#jumbo .titles h2 {
+#jumbo .titles h1 {
   color: white;
   font-size: 7rem;
   font-weight: 700;
@@ -383,7 +383,7 @@ header .menu .dropdown .sub-menu a {
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 10px;
-  padding: .9375rem 3.125rem;
+  padding: 15px 50px;
   border: 2px solid white;
   color: white;
   transition: .2s ease-in-out;
@@ -396,18 +396,18 @@ header .menu .dropdown .sub-menu a {
 
 /* Products Section */
 #products-group {
-  padding: 3.125rem 0 0 0;
+  padding: 50px 0 0 0;
   overflow: hidden;
 }
 
 #products-group div[class*="col"] {
-  margin-bottom: 3.125rem;
+  margin-bottom: 50px;
 }
 #products-group h2 {
   font-size: 2rem;
   text-align: center;
   font-weight: 900;
-  margin-bottom: 3.125rem;
+  margin-bottom: 50px;
 }
 #products-group .product-bg {
   background: white;
@@ -443,6 +443,7 @@ header .menu .dropdown .sub-menu a {
   font-size: 1.3rem;
   font-weight: 600;
   text-transform: uppercase;
+  margin-bottom: 5px;
 }
 #products-group .product-bg .overlay .product-price {
   font-weight: 600;
@@ -451,7 +452,7 @@ header .menu .dropdown .sub-menu a {
 /* footer section */
 footer {
   background: #1b1b1b;
-  padding: 3.125rem 0;
+  padding: 50px 0;
   overflow: hidden;
 }
 footer .col-md-4 {
@@ -493,7 +494,7 @@ footer .social-icons li a:hover {
   border: 1px solid white;
 }
 footer .social-icons li:not(:last-child) {
-  margin-right: .9375rem;
+  margin-right: 15px;
 }
 footer hr {
   color: white;
@@ -512,31 +513,104 @@ footer .address{
 /* MEDIA BREAKPOINTS */
 /* tablets */
 @media (min-width: 768px) and (max-width: 991px) {
-  body {
+  /* body {
     background: red;
-  }
+  } */
   #jumbo .bg-video {
-    transform: scale(3.5, 3.5);
+    transform: scale(3.5);
   }
   #jumbo .titles h2 {
-    font-size: 6rem;
+    font-size: 5rem;
   }
-  #jumbo .titles h2 {
-    font-size: 8rem;
+  #jumbo .titles h1 {
+    font-size: 7rem;
+  }
+  #twoCollections .left-c .left-c-img img {
+    object-position: left center;
+  }
+  #twoCollections .left-c .collection-title span  {
+    font-size: 2.5rem;
+  }
+  
+  #twoCollections .right-c .right-c-bg .right-c-img .collection-title span {
+    font-size: 2.5rem;
+    transform: translate3d(-36px, -100px, 0);
   }
 }
 /* large phones */
 @media (min-width: 576px) and (max-width: 767px) {
-  body {
+  /* body {
     background: yellow;
+  } */
+  #jumbo .bg-video {
+    transform: scale(4);
+  }
+  #jumbo .titles h2 {
+    font-size: 4rem;
+  }
+  #jumbo .titles h1 {
+    font-size: 6rem;
+  }
+
+  #twoCollections .left-c .collection-title span {
+    font-size: 2.5rem;
+  }
+
+  #twoCollections .right-c .right-c-bg .right-c-img .collection-title span {
+    font-size: 2.5rem;
+    transform: translate3d(-36px, -100px, 0);
   }
 }
 /* small phones */
 @media (max-width: 575px) {
-  body {
+  /* body {
     background: blue;
+  } */
+   #jumbo .bg-video {
+    transform: scale(3.5, 5);
+   }
+
+   #jumbo .titles h2 {
+     font-size: 2.5rem;
+   }
+
+   #jumbo .titles h1 {
+     font-size: 3rem;
+   }
+   #jumbo .state .number {
+     font-size: 2rem;
+   }
+  #twoCollections .left-c .left-c-img img {
+    object-position: left center;
   }
-  #jumbo .bg-video {
-    transform: scale(3.5, 3.5);
-  }
+   #twoCollections .left-c .collection-title span {
+     font-size: 2rem;
+   }
+
+   #twoCollections .right-c .right-c-bg .right-c-img .collection-title span {
+     font-size: 2rem;
+     transform: translate3d(0px, -100px, 0);
+   }
+   #horizontal-sale {
+     background: url(/assets/images/sale.png);
+     background-position-x: 0%;
+     background-position-y: 0%;
+     background-repeat: repeat;
+     background-size: auto;
+     background-size: cover;
+     background-position: top center;
+     background-repeat: no-repeat;
+     height: 500px;
+     width: 100%;
+   }
+   #horizontal-sale .overlay .percent-number {
+     font-size: 7rem;
+   }
+   #horizontal-sale .overlay .title {
+     font-size: 1.5rem;
+   }
+   #horizontal-sale .overlay .sale-btn {
+     letter-spacing: 7px;
+     padding: 10px 20px;
+   }
 }
